@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Money Converter</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    </head>
+
+    <body style="background-color: aqua">
+        <script type="text/javascript" src="server.js">
+            getvals();    
+        </script>
+        <div class="container-fluid">
+            <div class="col-sm-12" style="text-align:center;margin-top:50px;font-size:50px;">Welcome to online money converter</div>
+            <div style="text-align:center; margin-bottom: 5px">
+                <form action="" method="get" class="form">
+                    <div class="form">
+                        <label for="number">How much ?</label>
+                        <input type="text" name="number" id="number" required>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-sm-6" style="text-align:right">
+                    <label method="post" for="to" action=''>From</label>
+                    <select id="from" height="150px" name="from">
+                        <option value="">--Please choose an option--</option>
+                        <option value="USD">American Dollar</option>
+                        <option value="EUR">Euro</option>
+                        <option value="HKD">Hong Kong Dollar</option>
+                        <option value="GBP">Pounds</option>
+                    </select>
+                </div>
+                <div class="col-sm-6" style="text-align:left">
+                    <label method="post" for="to" action=''>To</label>
+                    <select id="to" name="to">
+                        <option value="">--Please choose an option--</option>
+                        <option value="USD">American Dollar</option>
+                        <option value="EUR">Euro</option>
+                        <option value="HKD">Hong Kong Dollar</option>
+                        <option value="GBP">Pounds</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+        <button class="Convert" id="button" type="button" style="display:block; margin:auto;" onclick="getvals()">Convert</button>
+        <!-- <script type="text/javascript">  
+            var getvals = document.getElementById("button")
+            getvals.onclick = function () {
+                var number=document.getElementById("number").value;
+                var from=document.getElementById("from").value;
+                var to=document.getElementById("to").value;
+                console.log(number);
+                console.log(from);
+                console.log(to);
+            }
+        </script> -->
+    </body>
+</html>
+
