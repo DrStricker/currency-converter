@@ -15,6 +15,15 @@ fx.rates = {
 	"USD" : 1
 }
 
+function getvals() {
+	var number=document.getElementById("number").value;
+	var from=document.getElementById("from").value;
+	var to=document.getElementById("to").value;
+	console.log(number);
+	console.log(from);
+	console.log(to);
+}
+
 var converted = fx.convert(12.99, {from: "USD", to: "EUR"});
 console.log(converted)
 
@@ -24,14 +33,4 @@ var server = http.createServer(function(req, res) {
 		res.write(data);
 		res.end();
 	})
-	// var getvals = document.getElementById("button")
-	function getvals() {
-		var number=document.getElementById("number").value;
-		var from=document.getElementById("from").value;
-		var to=document.getElementById("to").value;
-		console.log(number);
-		console.log(from);
-		console.log(to);
-	}
-	getvals();
 }).listen(8080);
